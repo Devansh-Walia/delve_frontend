@@ -2,32 +2,29 @@
 
 import clsx from "clsx";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 type Props = {
   item: {
     name: string;
     icon: React.ReactNode;
+    path: string;
   };
   pathname: string;
   itemKey: number;
 };
 
 const Item = ({ item, pathname, itemKey }: Props) => {
-  const params = useSearchParams();
-  const slug = item.name.toLowerCase();
+  const currentPathname = usePathname();
 
   return (
     <Link
-      href={{
-        pathname,
-        query: { slug },
-      }}
+      href={item.path}
       className={clsx(
         "flex w-full flex-col sm:flex-row gap-2 justify-center truncate sm:justify-start items-center py-4 px-2 sm:px-4 hover:bg-secondary-blue-highlight/70  hover:text-secondary/70",
-        params.get("slug") === slug
+        currentPathname === item.path
           ? "bg-secondary-blue-highlight text-secondary"
-          : params.get("slug") === null && itemKey === 0
+          : currentPathname === pathname && itemKey === 0
           ? "bg-secondary-blue-highlight text-secondary"
           : ""
       )}

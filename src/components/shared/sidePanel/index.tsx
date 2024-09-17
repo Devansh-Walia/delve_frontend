@@ -7,6 +7,7 @@ type Props = {
   navItems: {
     name: string;
     icon: React.ReactNode;
+    path: string;
   }[];
 };
 

@@ -8,20 +8,14 @@ const Layout = ({
 }>) => {
   const DashBoardNavItems = [
     {
-      name: "explore",
+      name: "users",
       icon: null,
+      path: "/dashboard",
     },
     {
-      name: "following",
+      name: "tables",
       icon: null,
-    },
-    {
-      name: "my pages",
-      icon: null,
-    },
-    {
-      name: "analytics",
-      icon: null,
+      path: "/dashboard/tables",
     },
   ];
 
