@@ -6,7 +6,6 @@ import { useEffect } from "react";
 import { useFormState } from "react-dom";
 import toast from "react-hot-toast";
 
-import loginUser from "@/app/login/action";
 import CustomInput from "@/components/shared/inputs/CustomInput";
 import { FormState } from "@/utils/constants";
 import { convertFormDataFromObject } from "@/utils/helpers";
@@ -14,6 +13,7 @@ import { AppRoutes, Status } from "@/utils/enums";
 import { z } from "zod";
 import { emailSchema, passwordSchema } from "@/utils/schemas";
 import Submit from "@/components/shared/buttons/submit";
+import loginUser from "./action";
 
 const LoginSchema = z.object({
   email: emailSchema,

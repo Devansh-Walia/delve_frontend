@@ -8,7 +8,6 @@ import { useFormState } from "react-dom";
 import toast from "react-hot-toast";
 import { z } from "zod";
 
-import signupUser from "@/app/signup/action";
 import Submit from "@/components/shared/buttons/submit";
 import CustomInput from "@/components/shared/inputs/CustomInput";
 import { FormState } from "@/utils/constants";
@@ -20,6 +19,7 @@ import {
   passwordSchema,
   usernameSchema,
 } from "@/utils/schemas";
+import signupUser from "./action";
 
 const SignupSchema = z.object({
   email: emailSchema,
