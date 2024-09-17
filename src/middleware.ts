@@ -7,8 +7,6 @@ import { AppRoutes } from "./utils/enums";
 export async function middleware(request: NextRequest) {
   const me = await getMe();
 
-  console.log(me, "me ");
-
   if (!me) {
     return NextResponse.redirect(new URL(AppRoutes.LOGIN, request.url));
   }
