@@ -12,7 +12,7 @@ type Props = {
 
 const SidePanel = ({ pathname, navItems }: Props) => {
   return (
-    <nav className="flex w-full items-center justify-center sm:flex-col border-b-1 sm:divide-y-2 sm:border-b-2">
+    <nav className="flex w-full items-center justify-center sm:flex-col sm:border-b-0 sm:pt-10">
       {navItems.map((item, index) => (
         <Suspense key={index}>
           <Item item={item} pathname={pathname} itemKey={index} />

@@ -25,3 +25,7 @@ body {
     text-wrap: balance;
   }
 }
+
+.shadow-subtle {
+  box-shadow: rgba(255, 255, 255, 0.05) 0px 0px 14px 0px;
+}

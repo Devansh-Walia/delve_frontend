@@ -26,12 +26,11 @@ const Layout = ({
   ];
 
   return (
-    <div className="flex flex-col bg-primary sm:flex-row sm:min-h-screen">
-      <aside className="w-full sm:w-56 sm:border-r-2 flex flex-col justify-between">
+    <div className="flex flex-col w-full sm:flex-row h-full p-4 sm:p-0 bg-primary min-h-screen">
+      <aside className="w-full sm:w-56 flex flex-col justify-between sm:m-4 rounded-2xl shadow-subtle">
         <div className="w-full flex sm:flex-col justify-center">
           <SidePanel pathname="/dashboard" navItems={DashBoardNavItems} />
         </div>
-
         <div className="p-4 hidden sm:block">
           <Logout />
         </div>
