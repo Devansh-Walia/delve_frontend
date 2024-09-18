@@ -3,7 +3,7 @@
 import { Loader, Table } from "@mantine/core";
 import { useEffect, useState } from "react";
 
-import { fetchTables } from "@/api_client";
+import { fetchTables } from "@/utils/api_client";
 import { TablesResponse } from "@/utils/types";
 
 const Tables = () => {

@@ -3,7 +3,7 @@
 import { Loader, Table } from "@mantine/core";
 import { useEffect, useState } from "react";
 
-import { fetchUsers } from "@/api_client";
+import { fetchUsers } from "@/utils/api_client";
 import { UserResponse } from "@/utils/types";
 
 const Dashboard = () => {

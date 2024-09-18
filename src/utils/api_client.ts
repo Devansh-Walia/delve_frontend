@@ -1,6 +1,7 @@
+import { getCookie } from "cookies-next";
+
 import { accessTokenCookieKey } from "@/utils/constants";
 import { TablesResponse, UserResponse } from "@/utils/types";
-import { getCookie } from "cookies-next";
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
