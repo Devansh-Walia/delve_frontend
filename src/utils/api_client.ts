@@ -63,6 +63,7 @@ export const toggleTableRls = async (tableName: string, enable: boolean) => {
     await response.json();
 
     toast.success("Table RLS toggled successfully");
+    window.location.reload();
   } catch (error) {
     toast.error("Failed to toggle table RLS");
   }

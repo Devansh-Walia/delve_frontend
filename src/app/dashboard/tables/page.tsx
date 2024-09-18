@@ -26,7 +26,7 @@ const Tables = () => {
       }
     };
     loadTables();
-  }, [userLimit, isToggling]);
+  }, [userLimit]);
 
   const handleToggleClick = async (tableName: string, enable: boolean) => {
     setIsToggling(tableName);

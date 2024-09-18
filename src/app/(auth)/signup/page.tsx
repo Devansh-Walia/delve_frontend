@@ -106,13 +106,16 @@ function SignUpForm() {
           {...form.getInputProps("name")}
           required
         />
-        <div className="flex justify-center">
-          <Submit title="Sign up" />
-        </div>
+
+        <Submit title="Sign up" />
+
         <hr className="my-6" />
         <div className="flex justify-center">
-          <p className="text-primary">Already have an account?</p>
-          <Link href={AppRoutes.LOGIN} className="text-primary">
+          <p className="text-primary">Already have an account? &nbsp;</p>
+          <Link
+            href={AppRoutes.LOGIN}
+            className="text-primary underline hover:text-secondary"
+          >
             Login
           </Link>
         </div>

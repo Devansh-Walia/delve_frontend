@@ -10,7 +10,7 @@ const Submit = ({ title }: { title: string }) => {
     <button
       type="submit"
       className={clsx(
-        "text-white p-3 rounded-md flex items-center justify-center gap-2",
+        "text-white w-full p-3 rounded-md flex items-center justify-center gap-2",
         pending ? "cursor-not-allowed  bg-primary/50" : "bg-primary"
       )}
     >

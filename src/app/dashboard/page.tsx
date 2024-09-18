@@ -49,7 +49,13 @@ const Dashboard = () => {
                     <tr key={user.id} className="hover:bg-gray-100/10">
                       <td className="p-2">{user.id}</td>
                       <td className="p-2">{user.email}</td>
-                      <td className="p-2">{user.mfa_enabled ? "Yes" : "No"}</td>
+                      <td className="p-2">
+                        {user.mfa_enabled ? (
+                          <span className="text-green-500">Yes</span>
+                        ) : (
+                          <span className="text-red-500">No</span>
+                        )}
+                      </td>
                     </tr>
                   ))
                 : null}

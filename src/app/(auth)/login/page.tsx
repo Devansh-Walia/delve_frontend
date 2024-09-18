@@ -80,19 +80,22 @@ function LoginForm() {
         />
         <div className="text-right mb-2">
           <Link
-            href={AppRoutes.FORGOT_PASSWORD}
-            className="link link-accent link-hover text-sm"
+            href={"#"}
+            className="link link-accent link-hover text-sm pointer-events-none"
           >
             Forgot password?
           </Link>
         </div>
-        <div className="flex justify-center">
-          <Submit title="Login" />
-        </div>
+
+        <Submit title="Login" />
+
         <hr className="my-6" />
         <div className="flex justify-center">
-          <p className="text-primary">Don&apos;t have an account?</p>
-          <Link href={AppRoutes.SIGN_UP} className="text-primary">
+          <p className="text-primary">Don&apos;t have an account? &nbsp;</p>
+          <Link
+            href={AppRoutes.SIGN_UP}
+            className="text-primary underline hover:text-secondary"
+          >
             Sign Up
           </Link>
         </div>
