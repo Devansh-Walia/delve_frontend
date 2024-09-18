@@ -1,11 +1,19 @@
 "use client";
 
 import { useState } from "react";
+import { deleteCookie } from "cookies-next";
+import { useRouter } from "next/navigation";
+
+import { accessTokenCookieKey } from "@/utils/constants";
 
 const Logout = () => {
+  const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
 
-  const logout = () => {};
+  const logout = () => {
+    deleteCookie(accessTokenCookieKey);
+    router.push("/login");
+  };
 
   return (
     <button
